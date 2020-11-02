@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入您想要查找的城市"
+        android:singleLine="true"
+        android:id="@+id/et_search"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_province"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/et_search"
+        android:layout_toLeftOf="@+id/index_letter"/>
+
+    <com.sunfb.sideindexletter.SideIndexLetter
+        android:id="@+id/index_letter"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:sideLetterNormalColor="@android:color/black"
+        android:layout_below="@+id/et_search"
+        app:sideLetterTextSize="16dp"
+        app:sideLetterTouchedColor="@android:color/holo_green_light" />
+
+    <TextView
+        android:id="@+id/tv_touch_letter"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:background="#005555"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

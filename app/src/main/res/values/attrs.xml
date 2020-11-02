@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <declare-styleable name="SideIndexLetter">
+       <attr name="sideLetterTextSize" format="dimension"/>
+       <attr name="sideLetterNormalColor" format="color"/>
+       <attr name="sideLetterTouchedColor" format="color"/>
+   </declare-styleable>
+</resources>
