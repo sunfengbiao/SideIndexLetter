@@ -10,6 +10,8 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -111,6 +113,19 @@ public class MainActivity extends Activity {
         rv_province.addItemDecoration(new SectionItemDecoration(this,allCities),0);
         rv_province.addItemDecoration(new DividerItemDecoration(this,allCities),1);
         rv_province.setAdapter(adapter);
+        sideIndexLetter.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Log.e("TAG", "onTouch:  execute ->"+event.getAction());
+                return true;
+            }
+        });
+        sideIndexLetter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e("TAG", "onClick:  execute ->");
+            }
+        });
 
 
     }

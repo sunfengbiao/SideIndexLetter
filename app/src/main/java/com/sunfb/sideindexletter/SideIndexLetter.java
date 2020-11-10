@@ -133,6 +133,9 @@ public class SideIndexLetter extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        //TODO 如果不super.onTouchEvent(event); 设置setOnClickListener是无效的
+        super.onTouchEvent(event);
+        Log.e("TAG", "onTouchEvent:  execute ->"+event.getAction());
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_MOVE:
@@ -166,6 +169,11 @@ public class SideIndexLetter extends View {
                 break;
         }
         return true;
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        return super.dispatchTouchEvent(event);
     }
 
     public interface ISideIndexLetterTouchListener{
